@@ -22,16 +22,12 @@ import javax.swing.JOptionPane;
 >>>>>>> 1602bfb7cddbe39744a6480aeb2e4471bfb9b0a1
  */
 public class Programacion2_Laboratorio3 {
-<<<<<<< HEAD
-static ArrayList<Administrador> administradores=new ArrayList();
-static ArrayList<Freelance>freelance=new ArrayList();
-static ArrayList <Empresas>empresas=new ArrayList();
-=======
+
 static ArrayList <Administrador> administradores=new ArrayList();
 static ArrayList <Freelance>freelance=new ArrayList();
 static ArrayList <Empresas> empresas=new ArrayList();
 static ArrayList <Proyecto> proyectos = new ArrayList();
->>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
+
     /**
      * @param args the command line arguments
      */
@@ -43,25 +39,17 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
         while (!opcion.equals("c")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
                     + "a. Registrar\n"
-<<<<<<< HEAD
+
 
                     + "b. Login\n"
                     + "C. Salir \n");
 
-=======
-                    + "b. Login\n"
-                    + "C. Salir \n");
->>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
            if(opcion.equals("a")){
                registrar();
            }
            if(opcion.equals("b")){
 
                login();
-<<<<<<< HEAD
-
-=======
->>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
            }
            
         }
@@ -201,19 +189,44 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                  }
                  break;
              case "c":
-                 break;
+                  String opcion3=JOptionPane.showInputDialog("a. Extranjeras\n"
+                          + "b. Nacionales");
+               if(opcion3.equals("a")){
+//                   String pais, String ciudad, String pagweb, String nombre,
+//int telefono, String correo, String contraseña, String descripcion
+                 String pais=JOptionPane.showInputDialog("pais");
+                    String ciudad=JOptionPane.showInputDialog("ciudad");
+                     String pagweb=JOptionPane.showInputDialog("pagina web");
+                     String nombre=JOptionPane.showInputDialog("nombre");
+                    int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                    String correo2=JOptionPane.showInputDialog("correo");
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 String descrpcion=JOptionPane.showInputDialog("descripcion");
+                 empresas.add(new Extranjeras(pais, ciudad, pagweb, nombre, telefono, correo2, contraseña2, descrpcion));
+
+               }
+               if(opcion3.equals("b")){
+//                   String departamento, String municipio, String cuidad, String mision, 
+//                   String vision, String nombre, int telefono, String correo, String contraseña, String descripcion
+                    String departamento=JOptionPane.showInputDialog("departamento");
+                     String municipio=JOptionPane.showInputDialog("municipio");
+                     String ciudad=JOptionPane.showInputDialog("ciudad");
+                     String mision=JOptionPane.showInputDialog("mision");
+                     String vision=JOptionPane.showInputDialog("vision");
+                     String nombre=JOptionPane.showInputDialog("nombre");
+                    int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                    String correo2=JOptionPane.showInputDialog("correo");
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 String descrpcion=JOptionPane.showInputDialog("descripcion");
+                 empresas.add(new Nacionales(departamento, municipio, ciudad, mision, 
+                         vision, nombre, telefono, correo2, contraseña2, descrpcion));
+                   
+               }
         
     }
-        
-    }
-<<<<<<< HEAD
-    
-=======
-    public static void LOGIN(){
         
     }
 
->>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
     public static void connectiveline(){
         
 
@@ -222,46 +235,38 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
             String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n");
             String contraseña = JOptionPane.showInputDialog("Ingrese contraseña \n");
              for (int i = 0; i < empresas.size(); i++) {
-<<<<<<< HEAD
-=======
-                 
->>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
+
                 if(empresas.get(i).getCorreo().equals(usuario)){
                     if(contraseña.equals(empresas.get(i).getContraseña())){
                         serEmpresa(i);
                     }else{
                         System.out.println("Datos incorrectos");
                     }
-<<<<<<< HEAD
-                }else{
-=======
+
+                
                     
                 }else
->>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
                     if(administradores.get(i).getUsuario().equals(usuario)){
                         if(contraseña.equals(administradores.get(i).getConraseña())){
                             serAdmin(i);
                         }else{
                             System.out.println("Datos incorrectos");
                         }
-<<<<<<< HEAD
-                    }
-                }else{
-                    if(freelance.get(i).getCorreo().equals(usuario)){
-                        if(contraseña.equals(freelance.get(i).getContraseña())){
-                            serFrelance(i);
-=======
+
                     
+
                 }else
                     if(freelance.get(i).getCorreo().equals(usuario)){
                         if(contraseña.equals(freelance.get(i).getContraseña())){
                             serFreelance(i);
->>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
+
                         }else{
                             System.out.println("Datos incorrectos");
                         }
                     }
-                }          
+             }
+                       
+             
     }//fin de login
     public static void serEmpresa(int pos){
         String opcion = " ";
@@ -287,13 +292,3 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
     }
     }
 
-
-<<<<<<< HEAD
-=======
-
-
-               
-           
-           
-
->>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
