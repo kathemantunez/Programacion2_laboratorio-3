@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Proyecto {
     private String nombre;
-    private ArrayList<Empresa> Empresa = new ArrayList();
+    private ArrayList<Empresas> Empresa = new ArrayList();
     private double precio;
     private String estado;
     private String Descripcion;
