@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Empresas {
     private String nombre;
     private int telefono;
-    private ArrayList<Proyectos> listap=new ArrayList();
+    private ArrayList<Proyecto> listap=new ArrayList();
     private String correo;
     private String contraseña;
     private String descripcion;
@@ -48,11 +48,11 @@ public class Empresas {
         this.telefono = telefono;
     }
 
-    public ArrayList<Proyectos> getListap() {
+    public ArrayList<Proyecto> getListap() {
         return listap;
     }
 
-    public void setListap(ArrayList<Proyectos> listap) {
+    public void setListap(ArrayList<Proyecto> listap) {
         this.listap = listap;
     }
 
