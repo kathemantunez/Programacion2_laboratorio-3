@@ -31,28 +31,17 @@ public class Programacion2_Laboratorio3 {
        String opcion = " ";
         while (!opcion.equals("f")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
-                    + "a. Empresas\n"
-                    + "b. Personas\n"
-                    + "c. Proyectos\n"
-                    + "d. Ingresos\n"
-                    + "e. Connective Line\n"
-                    + "f. Salir \n");
+                    + "a. Registrar\n"
+                    + "b. Login\n"
+                    + "C. Salir \n");
            if(opcion.equals("a")){
                empresas();
                
            }
            if(opcion.equals("b")){
-               personas();
+               login();
            }
-           if(opcion.equals("c")){
-               proyectos();
-           }
-           if(opcion.equals("d")){
-               ingresos();
-           }
-           if(opcion.equals("e")){
-               connectiveline();
-           }
+           
         }
                     
     }
@@ -72,5 +61,44 @@ public class Programacion2_Laboratorio3 {
         
 
     }
-    
-}
+    public static void login(){
+            String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n");
+            String contraseña = JOptionPane.showInputDialog("Ingrese contraseña \n");
+             for (int i = 0; i < listaMaestros.size(); i++) {
+                if(listaMaestros.get(i).getUsuario().equals(usuario)){
+                    if(contraseña.equals(listaMaestros.get(i).getContraseña())){
+                        serEmpresa(i);
+                    }else{
+                        System.out.println("Datos incorrectos");
+                    }
+                }else{
+                    if(listaAlumnos.get(i).getUsuario().equals(usuario)){
+                        if(contraseña.equals(listaAlumnos.get(i).getContraseña())){
+                            serAdmin(i);
+                        }else{
+                            System.out.println("Datos incorrectos");
+                        }
+                    }
+                }else{
+                    if(listaAlumnos.get(i).getUsuario().equals(usuario)){
+                        if(contraseña.equals(listaAlumnos.get(i).getContraseña())){
+                            serFrelance(i);
+                        }else{
+                            System.out.println("Datos incorrectos");
+                        }
+                    }
+                }
+            }    
+    }//fin de login
+    public static void serEmpresa(int pos){
+        
+    }
+    public static void serAdmin(int pos){
+        
+    }
+    public static void serFreelance(int pos){
+        
+    }
+    }
+
+
