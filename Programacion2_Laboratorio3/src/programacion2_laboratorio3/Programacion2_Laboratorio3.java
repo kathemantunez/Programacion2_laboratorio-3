@@ -22,9 +22,16 @@ import javax.swing.JOptionPane;
 >>>>>>> 1602bfb7cddbe39744a6480aeb2e4471bfb9b0a1
  */
 public class Programacion2_Laboratorio3 {
+<<<<<<< HEAD
 static ArrayList<Administrador> administradores=new ArrayList();
 static ArrayList<Freelance>freelance=new ArrayList();
 static ArrayList <Empresas>empresas=new ArrayList();
+=======
+static ArrayList <Administrador> administradores=new ArrayList();
+static ArrayList <Freelance>freelance=new ArrayList();
+static ArrayList <Empresas> empresas=new ArrayList();
+static ArrayList <Proyecto> proyectos = new ArrayList();
+>>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
     /**
      * @param args the command line arguments
      */
@@ -36,17 +43,25 @@ static ArrayList <Empresas>empresas=new ArrayList();
         while (!opcion.equals("c")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
                     + "a. Registrar\n"
+<<<<<<< HEAD
 
                     + "b. Login\n"
                     + "C. Salir \n");
 
+=======
+                    + "b. Login\n"
+                    + "C. Salir \n");
+>>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
            if(opcion.equals("a")){
                registrar();
            }
            if(opcion.equals("b")){
 
                login();
+<<<<<<< HEAD
 
+=======
+>>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
            }
            
         }
@@ -191,7 +206,14 @@ static ArrayList <Empresas>empresas=new ArrayList();
     }
         
     }
+<<<<<<< HEAD
     
+=======
+    public static void LOGIN(){
+        
+    }
+
+>>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
     public static void connectiveline(){
         
 
@@ -200,40 +222,78 @@ static ArrayList <Empresas>empresas=new ArrayList();
             String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n");
             String contraseña = JOptionPane.showInputDialog("Ingrese contraseña \n");
              for (int i = 0; i < empresas.size(); i++) {
+<<<<<<< HEAD
+=======
+                 
+>>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
                 if(empresas.get(i).getCorreo().equals(usuario)){
                     if(contraseña.equals(empresas.get(i).getContraseña())){
                         serEmpresa(i);
                     }else{
                         System.out.println("Datos incorrectos");
                     }
+<<<<<<< HEAD
                 }else{
+=======
+                    
+                }else
+>>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
                     if(administradores.get(i).getUsuario().equals(usuario)){
                         if(contraseña.equals(administradores.get(i).getConraseña())){
                             serAdmin(i);
                         }else{
                             System.out.println("Datos incorrectos");
                         }
+<<<<<<< HEAD
                     }
                 }else{
                     if(freelance.get(i).getCorreo().equals(usuario)){
                         if(contraseña.equals(freelance.get(i).getContraseña())){
                             serFrelance(i);
+=======
+                    
+                }else
+                    if(freelance.get(i).getCorreo().equals(usuario)){
+                        if(contraseña.equals(freelance.get(i).getContraseña())){
+                            serFreelance(i);
+>>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5
                         }else{
                             System.out.println("Datos incorrectos");
                         }
                     }
-                }
-            }    
+                }          
     }//fin de login
     public static void serEmpresa(int pos){
-        
+        String opcion = " ";
+        while (!opcion.equals("c")) {
+            opcion=JOptionPane.showInputDialog("EMPRESA\n"
+                    + "a. Crear Proyecto\n"
+                    + "b. Modificar Proyecto\n"
+                    + "C. Eliminar Proyecto \n");
+            if(opcion.equals("a")){
+            String proyecto = JOptionPane.showInputDialog("Ingrese el nombre del proyecto \n");
+            String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n"); 
+            }
+
+    }
     }
     public static void serAdmin(int pos){
+        
         
     }
     public static void serFreelance(int pos){
         
+        
     }
     }
 
 
+<<<<<<< HEAD
+=======
+
+
+               
+           
+           
+
+>>>>>>> 53643260dabe4109bf65ba7d940d3edc8ee455d5

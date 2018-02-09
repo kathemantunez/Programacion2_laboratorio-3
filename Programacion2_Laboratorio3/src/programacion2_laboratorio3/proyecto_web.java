@@ -18,11 +18,9 @@ public class proyecto_web extends Proyecto {
         return DesarrolladorWeb;
     }
 
-<<<<<<< HEAD
-    public void setDesarrollador_Web(ArrayList<DesarrolladorWeb> Desarrollador_Web) {
-=======
+
     public void setDesarrollador_Web(ArrayList<DesarrolladorWeb> DesarrolladorWeb) {
->>>>>>> 631463db6db625631cec1a511a14c4be6af725d1
+
         this.DesarrolladorWeb = DesarrolladorWeb;
     }
      
