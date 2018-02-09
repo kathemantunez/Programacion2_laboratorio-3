@@ -10,13 +10,10 @@ import java.util.Date;
 
 
 public class Ingresos {
-    private String nombre;
-    private ArrayList<Empresa> Empresa = new ArrayList();
-    private double precio;
-    private String estado;
-    private String Descripcion;
-    private Date fecha_inicio;
-    private Date fecha_entrega;
-    
+  
+private ArrayList <Empresa> empresa = new ArrayList();
+private ArrayList <Dinero> freelance = new ArrayList();
+private double dinero;
+
     
 }
