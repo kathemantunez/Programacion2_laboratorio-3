@@ -10,17 +10,7 @@ package programacion2_laboratorio3;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author FABIO
-=======
-import javax.swing.JOptionPane;
 
-/**
- *
- * @author KATHERINE
->>>>>>> 1602bfb7cddbe39744a6480aeb2e4471bfb9b0a1
- */
 public class Programacion2_Laboratorio3 {
 static ArrayList <Administrador> administradores=new ArrayList();
 static ArrayList <Freelance>freelance=new ArrayList();
@@ -234,6 +224,7 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                     + "b. Modificar Proyecto\n"
                     + "C. Eliminar Proyecto \n");
             if(opcion.equals("a")){
+                empresas.get(pos).setListap(proyectos);
             String proyecto = JOptionPane.showInputDialog("Ingrese el nombre del proyecto \n");
             String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n"); 
             empresas.get(pos).setListap(proyectos);
