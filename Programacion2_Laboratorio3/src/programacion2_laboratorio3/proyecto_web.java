@@ -5,10 +5,10 @@
  */
 package programacion2_laboratorio3;
 
-/**
- *
- * @author FABIO
- */
-public class proyecto_web {
-    
+import java.util.ArrayList;
+
+
+public class proyecto_web extends Proyecto {
+     ArrayList<Desarrollador_web> Desarrollador_Web = new ArrayList();
+     
 }

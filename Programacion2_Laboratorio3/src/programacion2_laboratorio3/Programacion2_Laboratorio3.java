@@ -5,9 +5,20 @@
  */
 package programacion2_laboratorio3;
 
+
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author FABIO
+=======
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author KATHERINE
+>>>>>>> 1602bfb7cddbe39744a6480aeb2e4471bfb9b0a1
  */
 public class Programacion2_Laboratorio3 {
 
@@ -16,6 +27,50 @@ public class Programacion2_Laboratorio3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
+       String opcion = " ";
+        while (!opcion.equals("f")) {
+            opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
+                    + "a. Empresas\n"
+                    + "b. Personas\n"
+                    + "c. Proyectos\n"
+                    + "d. Ingresos\n"
+                    + "e. Connective Line\n"
+                    + "f. Salir \n");
+           if(opcion.equals("a")){
+               empresas();
+               
+           }
+           if(opcion.equals("b")){
+               personas();
+           }
+           if(opcion.equals("c")){
+               proyectos();
+           }
+           if(opcion.equals("d")){
+               ingresos();
+           }
+           if(opcion.equals("e")){
+               connectiveline();
+           }
+        }
+                    
+    }
+    public static void empresas(){
+        
+    }
+    public static void personas(){
+        
+    }
+    public static void proyectos(){
+        
+    }
+    public static  void ingresos(){
+        
+    }
+    public static void connectiveline(){
+        
+
     }
     
 }
