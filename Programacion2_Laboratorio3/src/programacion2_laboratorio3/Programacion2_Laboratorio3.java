@@ -50,7 +50,6 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
         }
     }
     public static void registrar(){
-        
          String opcion=JOptionPane.showInputDialog("a. Administrador\n"
                  + "b. Freelance\n"
                  + "c. Empresas");
@@ -237,9 +236,11 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
             if(opcion.equals("a")){
             String proyecto = JOptionPane.showInputDialog("Ingrese el nombre del proyecto \n");
             String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n"); 
+            empresas.get(pos).setListap(proyectos);
+            
             }
-
     }
+        
     }
     public static void serAdmin(int pos){
         
