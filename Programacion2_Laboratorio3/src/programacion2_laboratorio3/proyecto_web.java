@@ -9,17 +9,17 @@ import java.util.ArrayList;
 
 
 public class proyecto_web extends Proyecto {
-     ArrayList<Desarrollador_web> Desarrollador_Web = new ArrayList();
+     ArrayList<DesarrolladorWeb> DesarrolladorWeb = new ArrayList();
 
     public proyecto_web() {
     }
 
-    public ArrayList<Desarrollador_web> getDesarrollador_Web() {
-        return Desarrollador_Web;
+    public ArrayList<DesarrolladorWeb> getDesarrollador_Web() {
+        return DesarrolladorWeb;
     }
 
-    public void setDesarrollador_Web(ArrayList<Desarrollador_web> Desarrollador_Web) {
-        this.Desarrollador_Web = Desarrollador_Web;
+    public void setDesarrollador_Web(ArrayList<DesarrolladorWeb> Desarrollador_Web) {
+        this.DesarrolladorWeb = DesarrolladorWeb;
     }
      
      

@@ -4,20 +4,28 @@ package programacion2_laboratorio3;
 import java.util.ArrayList;
 
 
-public class contador {
+public class contador extends Freelance{
     private ArrayList <proyecto_comercial> proyecto_comercial = new ArrayList();
     private String universidad;
     private String Estado_Inscripcion;
     private String Hobbies;
 
-    public contador() {
-    }
+//    public contador() {
+//    }
+//
+//    public contador(String universidad, String Estado_Inscripcion, String Hobbies) {
+//        this.universidad = universidad;
+//        this.Estado_Inscripcion = Estado_Inscripcion;
+//        this.Hobbies = Hobbies;
+//    }
 
-    public contador(String universidad, String Estado_Inscripcion, String Hobbies) {
+    public contador(String universidad, String Estado_Inscripcion, String Hobbies, String nombre, String contraseña, String genero, int edad, double dinero, String ciudad, int telefono, String numidentidad, String correo) {
+        super(nombre, contraseña, genero, edad, dinero, ciudad, telefono, numidentidad, correo);
         this.universidad = universidad;
         this.Estado_Inscripcion = Estado_Inscripcion;
         this.Hobbies = Hobbies;
     }
+    
 
     public ArrayList<proyecto_comercial> getProyecto_comercial() {
         return proyecto_comercial;

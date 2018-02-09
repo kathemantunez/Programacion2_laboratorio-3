@@ -11,15 +11,21 @@ import java.util.ArrayList;
  *
  * @author KATHERINE
  */
-public class Fotografo {
+public class Fotografo  extends Freelance{
      private ArrayList<proyecto_publicitario> listapp=new ArrayList();
      private String marca;
      private String modelocamara;
 
-    public Fotografo(String marca, String modelocamara) {
+    
+
+    public Fotografo(String marca, String modelocamara, String nombre, String contraseña, String genero, int edad, double dinero, String ciudad, int telefono, String numidentidad, String correo) {
+        super(nombre, contraseña, genero, edad, dinero, ciudad, telefono, numidentidad, correo);
         this.marca = marca;
         this.modelocamara = modelocamara;
     }
+    
+
+    
 
     public ArrayList<proyecto_publicitario> getListapp() {
         return listapp;

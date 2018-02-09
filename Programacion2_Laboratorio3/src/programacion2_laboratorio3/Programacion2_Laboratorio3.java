@@ -7,6 +7,7 @@ package programacion2_laboratorio3;
 
 
 
+import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,56 +22,82 @@ import javax.swing.JOptionPane;
 >>>>>>> 1602bfb7cddbe39744a6480aeb2e4471bfb9b0a1
  */
 public class Programacion2_Laboratorio3 {
-
+static ArrayList administradores=new ArrayList();
+static ArrayList freelance=new ArrayList();
+static ArrayList empresas=new ArrayList();
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
 
        String opcion = " ";
-        while (!opcion.equals("f")) {
+        while (!opcion.equals("c")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
-                    + "a. Empresas\n"
-                    + "b. Personas\n"
-                    + "c. Proyectos\n"
-                    + "d. Ingresos\n"
-                    + "e. Connective Line\n"
-                    + "f. Salir \n");
+                    + "a. Registrar\n"
+                    + "b. LOG IN\n"
+                    + "c. salir");
            if(opcion.equals("a")){
-               empresas();
-               
+               registrar();
            }
            if(opcion.equals("b")){
-               personas();
-           }
-           if(opcion.equals("c")){
-               proyectos();
-           }
-           if(opcion.equals("d")){
-               ingresos();
-           }
-           if(opcion.equals("e")){
-               connectiveline();
+               LOGIN();
            }
         }
+    }
+    public static void registrar(){
+        
+         String opcion=JOptionPane.showInputDialog("a. Administrador\n"
+                 + "b. Freelance\n"
+                 + "c. Empresas");
+         switch (opcion){
+             case "a":
+                 String usuario=JOptionPane.showInputDialog("Usuario");
+                 String contraseña=JOptionPane.showInputDialog("Contraeña");
+                 
+                 String numidentidad=JOptionPane.showInputDialog("Numero de idnetidad");
+                 String correo=JOptionPane.showInputDialog("correo");
+                 administradores.add(new Administrador(usuario, contraseña, numidentidad, correo));
+                 break;
+             case "b":
+                 String opcion2=JOptionPane.showInputDialog("a. desarrollador web\n"
+                         + "b. fotógrafo\n"
+                         + "c. diseñador grafico\n"
+                         + "d. medios udiovisuales\n"
+                         + "e. marketing \n"
+                         + "f. contador");
+                 if(opcion2.equals("a")){
+//                     String lenguajeprogra, String universidad, String idioma, String nombre, String contraseña, 
+//String genero, int edad, double dinero, String ciudad, int telefono, String numidentidad, String correo
                     
-    }
-    public static void empresas(){
+                 }
+                 if(opcion2.equals("b")){
+                     
+                 }
+                 if(opcion2.equals("c")){
+                     
+                 }
+                 if(opcion2.equals("d")){
+                     
+                 }
+                 if(opcion2.equals("e")){
+                     
+                 }if(opcion2.equals("f")){
+                     
+                 }
+                 
+                 
+                 break;
+             case "c":
+                 break;
         
     }
-    public static void personas(){
         
     }
-    public static void proyectos(){
+    public static void LOGIN(){
         
     }
-    public static  void ingresos(){
-        
-    }
-    public static void connectiveline(){
-        
-
-    }
-    
-}
+               
+           }
+           
