@@ -22,9 +22,9 @@ import javax.swing.JOptionPane;
 >>>>>>> 1602bfb7cddbe39744a6480aeb2e4471bfb9b0a1
  */
 public class Programacion2_Laboratorio3 {
-static ArrayList administradores=new ArrayList();
-static ArrayList freelance=new ArrayList();
-static ArrayList empresas=new ArrayList();
+static ArrayList<Administrador> administradores=new ArrayList();
+static ArrayList<Freelance>freelance=new ArrayList();
+static ArrayList <Empresas>empresas=new ArrayList();
     /**
      * @param args the command line arguments
      */
@@ -36,22 +36,17 @@ static ArrayList empresas=new ArrayList();
         while (!opcion.equals("c")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
                     + "a. Registrar\n"
-<<<<<<< HEAD
+
                     + "b. Login\n"
                     + "C. Salir \n");
-=======
-                    + "b. LOG IN\n"
-                    + "c. salir");
->>>>>>> 826a93b52ffcbcb6344da8125e669d80801c04cb
+
            if(opcion.equals("a")){
                registrar();
            }
            if(opcion.equals("b")){
-<<<<<<< HEAD
+
                login();
-=======
-               LOGIN();
->>>>>>> 826a93b52ffcbcb6344da8125e669d80801c04cb
+
            }
            
         }
@@ -196,10 +191,7 @@ static ArrayList empresas=new ArrayList();
     }
         
     }
-    public static void LOGIN(){
-        
-    }
-<<<<<<< HEAD
+    
     public static void connectiveline(){
         
 
@@ -207,24 +199,24 @@ static ArrayList empresas=new ArrayList();
     public static void login(){
             String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n");
             String contraseña = JOptionPane.showInputDialog("Ingrese contraseña \n");
-             for (int i = 0; i < listaMaestros.size(); i++) {
-                if(listaMaestros.get(i).getUsuario().equals(usuario)){
-                    if(contraseña.equals(listaMaestros.get(i).getContraseña())){
+             for (int i = 0; i < empresas.size(); i++) {
+                if(empresas.get(i).getCorreo().equals(usuario)){
+                    if(contraseña.equals(empresas.get(i).getContraseña())){
                         serEmpresa(i);
                     }else{
                         System.out.println("Datos incorrectos");
                     }
                 }else{
-                    if(listaAlumnos.get(i).getUsuario().equals(usuario)){
-                        if(contraseña.equals(listaAlumnos.get(i).getContraseña())){
+                    if(administradores.get(i).getUsuario().equals(usuario)){
+                        if(contraseña.equals(administradores.get(i).getConraseña())){
                             serAdmin(i);
                         }else{
                             System.out.println("Datos incorrectos");
                         }
                     }
                 }else{
-                    if(listaAlumnos.get(i).getUsuario().equals(usuario)){
-                        if(contraseña.equals(listaAlumnos.get(i).getContraseña())){
+                    if(freelance.get(i).getCorreo().equals(usuario)){
+                        if(contraseña.equals(freelance.get(i).getContraseña())){
                             serFrelance(i);
                         }else{
                             System.out.println("Datos incorrectos");
@@ -245,8 +237,3 @@ static ArrayList empresas=new ArrayList();
     }
 
 
-=======
-               
-           }
-           
->>>>>>> 826a93b52ffcbcb6344da8125e669d80801c04cb
