@@ -18,4 +18,5 @@ public class Ingresos {
     private Date fecha_inicio;
     private Date fecha_entrega;
     
+    
 }
