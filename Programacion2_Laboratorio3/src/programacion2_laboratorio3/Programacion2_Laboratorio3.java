@@ -36,14 +36,24 @@ static ArrayList empresas=new ArrayList();
         while (!opcion.equals("c")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
                     + "a. Registrar\n"
+<<<<<<< HEAD
+                    + "b. Login\n"
+                    + "C. Salir \n");
+=======
                     + "b. LOG IN\n"
                     + "c. salir");
+>>>>>>> 826a93b52ffcbcb6344da8125e669d80801c04cb
            if(opcion.equals("a")){
                registrar();
            }
            if(opcion.equals("b")){
+<<<<<<< HEAD
+               login();
+=======
                LOGIN();
+>>>>>>> 826a93b52ffcbcb6344da8125e669d80801c04cb
            }
+           
         }
     }
     public static void registrar(){
@@ -189,6 +199,54 @@ static ArrayList empresas=new ArrayList();
     public static void LOGIN(){
         
     }
+<<<<<<< HEAD
+    public static void connectiveline(){
+        
+
+    }
+    public static void login(){
+            String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n");
+            String contraseña = JOptionPane.showInputDialog("Ingrese contraseña \n");
+             for (int i = 0; i < listaMaestros.size(); i++) {
+                if(listaMaestros.get(i).getUsuario().equals(usuario)){
+                    if(contraseña.equals(listaMaestros.get(i).getContraseña())){
+                        serEmpresa(i);
+                    }else{
+                        System.out.println("Datos incorrectos");
+                    }
+                }else{
+                    if(listaAlumnos.get(i).getUsuario().equals(usuario)){
+                        if(contraseña.equals(listaAlumnos.get(i).getContraseña())){
+                            serAdmin(i);
+                        }else{
+                            System.out.println("Datos incorrectos");
+                        }
+                    }
+                }else{
+                    if(listaAlumnos.get(i).getUsuario().equals(usuario)){
+                        if(contraseña.equals(listaAlumnos.get(i).getContraseña())){
+                            serFrelance(i);
+                        }else{
+                            System.out.println("Datos incorrectos");
+                        }
+                    }
+                }
+            }    
+    }//fin de login
+    public static void serEmpresa(int pos){
+        
+    }
+    public static void serAdmin(int pos){
+        
+    }
+    public static void serFreelance(int pos){
+        
+    }
+    }
+
+
+=======
                
            }
            
+>>>>>>> 826a93b52ffcbcb6344da8125e669d80801c04cb
