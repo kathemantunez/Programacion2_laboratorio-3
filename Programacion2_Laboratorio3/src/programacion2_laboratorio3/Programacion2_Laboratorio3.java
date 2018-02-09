@@ -9,6 +9,7 @@ package programacion2_laboratorio3;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
@@ -23,11 +24,11 @@ import javax.swing.JOptionPane;
  */
 public class Programacion2_Laboratorio3 {
 
-static ArrayList <Administrador> administradores=new ArrayList();
-static ArrayList <Freelance>freelance=new ArrayList();
-static ArrayList <Empresas> empresas=new ArrayList();
-static ArrayList <Proyecto> proyectos = new ArrayList();
-
+//static ArrayList <Administrador> administradores=new ArrayList();
+//static ArrayList <Freelance>freelance=new ArrayList();
+//static ArrayList <Empresas> empresas=new ArrayList();
+//static ArrayList <Proyecto> proyectos = new ArrayList();
+        static Connective_Line connective=new Connective_Line();
     /**
      * @param args the command line arguments
      */
@@ -66,7 +67,8 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                  
                  String numidentidad=JOptionPane.showInputDialog("Numero de idnetidad");
                  String correo=JOptionPane.showInputDialog("correo");
-                 administradores.add(new Administrador(usuario, contraseña, numidentidad, correo));
+                 connective.getAdministradores().add(new Administrador(usuario, contraseña, numidentidad, correo));
+//                 administradores.add(new Administrador(usuario, contraseña, numidentidad, correo));
                  break;
              case "b":
                  String opcion2=JOptionPane.showInputDialog("a. desarrollador web\n"
@@ -87,8 +89,10 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                 int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
                 String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
                  String correo2=JOptionPane.showInputDialog("correo");
-                 freelance.add(new DesarrolladorWeb(lenguaajeprogra, universdad, idioma,
+                 connective.getFreelance().add(new DesarrolladorWeb(lenguaajeprogra, universdad, idioma, 
                          nombre, contraseña2, nombre, edad, dinero, ciudad, telefono, numidentidad2, correo2));
+//                 freelance.add(new DesarrolladorWeb(lenguaajeprogra, universdad, idioma,
+//                         nombre, contraseña2, nombre, edad, dinero, ciudad, telefono, numidentidad2, correo2));
 
                  
                  }
@@ -107,8 +111,10 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                    int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
                 String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
                  String correo2=JOptionPane.showInputDialog("correo");
-                 freelance.add(new Fotografo(marca, modelocamara, nombre, contraseña2, 
+                 connective.getFreelance().add(new Fotografo(marca, modelocamara, nombre, contraseña2, 
                          genero, edad, dinero, ciudad, telefono, numidentidad2, correo2));
+//                 freelance.add(new Fotografo(marca, modelocamara, nombre, contraseña2, 
+//                         genero, edad, dinero, ciudad, telefono, numidentidad2, correo2));
                  }
                  if(opcion2.equals("c")){
 //                     String universidad, String hobbies, String nombre, String contraseña, 
@@ -125,7 +131,7 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                    int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
                 String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
                  String correo2=JOptionPane.showInputDialog("correo");
-                 freelance.add(new DiseñadorGrafico(universidad, hobbies, nombre, contraseña2, genero, edad, dinero,
+                 connective.getFreelance().add(new DiseñadorGrafico(universidad, hobbies, nombre, contraseña2, genero, edad, dinero,
                          ciudad, telefono, numidentidad2, correo2));
                  
                  
@@ -145,7 +151,7 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                    int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
                 String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
                  String correo2=JOptionPane.showInputDialog("correo");
-                 freelance.add(new medios_audiovisuales(nombre_marca, modelo_camara, nombre,
+                 connective.getFreelance().add(new medios_audiovisuales(nombre_marca, modelo_camara, nombre,
                          contraseña2, genero, edad, dinero, ciudad, telefono, numidentidad2, correo2));
                  }
                  if(opcion2.equals("e")){
@@ -162,7 +168,7 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                    int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
                 String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
                  String correo2=JOptionPane.showInputDialog("correo");
-                 freelance.add(new marketing(Red_social, nombre, contraseña2, genero, edad, dinero,
+                 connective.getFreelance().add(new marketing(Red_social, nombre, contraseña2, genero, edad, dinero,
                          ciudad, telefono, numidentidad2, correo2));
                     
          }
@@ -182,7 +188,7 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                    int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
                 String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
                  String correo2=JOptionPane.showInputDialog("correo");
-                 freelance.add(new contador(universidad, estado_inscripcion, hobbies, nombre, 
+                 connective.getFreelance().add(new contador(universidad, estado_inscripcion, hobbies, nombre, 
                          contraseña2, genero, edad, dinero, ciudad, telefono, numidentidad2, correo2));
                 
                  
@@ -202,7 +208,7 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                     String correo2=JOptionPane.showInputDialog("correo");
                  String contraseña2=JOptionPane.showInputDialog("contraseña");
                  String descrpcion=JOptionPane.showInputDialog("descripcion");
-                 empresas.add(new Extranjeras(pais, ciudad, pagweb, nombre, telefono, correo2, contraseña2, descrpcion));
+                 connective.getEmpresa().add(new Extranjeras(pais, ciudad, pagweb, nombre, telefono, correo2, contraseña2, descrpcion));
 
                }
                if(opcion3.equals("b")){
@@ -218,7 +224,7 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                     String correo2=JOptionPane.showInputDialog("correo");
                  String contraseña2=JOptionPane.showInputDialog("contraseña");
                  String descrpcion=JOptionPane.showInputDialog("descripcion");
-                 empresas.add(new Nacionales(departamento, municipio, ciudad, mision, 
+                 connective.getEmpresa().add(new Nacionales(departamento, municipio, ciudad, mision, 
                          vision, nombre, telefono, correo2, contraseña2, descrpcion));
                    
                }
@@ -234,10 +240,10 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
     public static void login(){
             String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n");
             String contraseña = JOptionPane.showInputDialog("Ingrese contraseña \n");
-             for (int i = 0; i < empresas.size(); i++) {
+             for (int i = 0; i < connective.getEmpresa().size(); i++) {
 
-                if(empresas.get(i).getCorreo().equals(usuario)){
-                    if(contraseña.equals(empresas.get(i).getContraseña())){
+                if(connective.getEmpresa().get(i).getCorreo().equals(usuario)){
+                    if(contraseña.equals(connective.getEmpresa().get(i).getContraseña())){
                         serEmpresa(i);
                     }else{
                         System.out.println("Datos incorrectos");
@@ -246,8 +252,8 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                 
                     
                 }else
-                    if(administradores.get(i).getUsuario().equals(usuario)){
-                        if(contraseña.equals(administradores.get(i).getConraseña())){
+                    if(connective.getAdministradores().get(i).getUsuario().equals(usuario)){
+                        if(contraseña.equals(connective.getAdministradores().get(i).getConraseña())){
                             serAdmin(i);
                         }else{
                             System.out.println("Datos incorrectos");
@@ -256,8 +262,8 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                     
 
                 }else
-                    if(freelance.get(i).getCorreo().equals(usuario)){
-                        if(contraseña.equals(freelance.get(i).getContraseña())){
+                    if(connective.getFreelance().get(i).getCorreo().equals(usuario)){
+                        if(contraseña.equals(connective.getFreelance().get(i).getContraseña())){
                             serFreelance(i);
 
                         }else{
