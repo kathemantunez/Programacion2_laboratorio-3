@@ -5,11 +5,20 @@
  */
 package programacion2_laboratorio3;
 
+
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author FABIO
+=======
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author KATHERINE
+>>>>>>> 1602bfb7cddbe39744a6480aeb2e4471bfb9b0a1
  */
 public class Programacion2_Laboratorio3 {
 
@@ -18,6 +27,7 @@ public class Programacion2_Laboratorio3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+
        String opcion = " ";
         while (!opcion.equals("f")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
@@ -60,6 +70,7 @@ public class Programacion2_Laboratorio3 {
     }
     public static void connectiveline(){
         
+
     }
     
 }
