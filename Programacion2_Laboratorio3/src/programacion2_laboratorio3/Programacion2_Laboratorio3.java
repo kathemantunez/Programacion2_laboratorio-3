@@ -71,26 +71,117 @@ static ArrayList <Proyecto> proyectos = new ArrayList();
                          + "e. marketing \n"
                          + "f. contador");
                  if(opcion2.equals("a")){
-//                     String lenguajeprogra, String universidad, String idioma, String nombre, String contraseña, 
-//String genero, int edad, double dinero, String ciudad, int telefono, String numidentidad, String correo
-                    
+                 String lenguaajeprogra=JOptionPane.showInputDialog("lenguaje de programacion");
+                 String universdad=JOptionPane.showInputDialog("universidad");
+                 String idioma=JOptionPane.showInputDialog("idioma");
+                 String nombre=JOptionPane.showInputDialog("nombre");
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 int  edad=Integer.parseInt(JOptionPane.showInputDialog("edad"));
+                 double dinero=Double.parseDouble(JOptionPane.showInputDialog("dinero"));
+                String ciudad=JOptionPane.showInputDialog("ciudad");
+                int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
+                 String correo2=JOptionPane.showInputDialog("correo");
+                 freelance.add(new DesarrolladorWeb(lenguaajeprogra, universdad, idioma,
+                         nombre, contraseña2, nombre, edad, dinero, ciudad, telefono, numidentidad2, correo2));
+
+                 
                  }
                  if(opcion2.equals("b")){
-                     
+//                     String marca, String modelocamara, String nombre, String contraseña,
+//                     String genero, int edad, double dinero, String ciudad, int telefono, String numidentidad, String correo
+                String marca=JOptionPane.showInputDialog("marca");
+                 String modelocamara=JOptionPane.showInputDialog("modelo camara ");
+                 String nombre=JOptionPane.showInputDialog("nombre");
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 String genero=JOptionPane.showInputDialog("genero");
+                 
+                  int  edad=Integer.parseInt(JOptionPane.showInputDialog("edad"));
+                   double dinero=Double.parseDouble(JOptionPane.showInputDialog("dinero"));
+                   String ciudad=JOptionPane.showInputDialog("ciudad");
+                   int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
+                 String correo2=JOptionPane.showInputDialog("correo");
+                 freelance.add(new Fotografo(marca, modelocamara, nombre, contraseña2, 
+                         genero, edad, dinero, ciudad, telefono, numidentidad2, correo2));
                  }
                  if(opcion2.equals("c")){
-                     
+//                     String universidad, String hobbies, String nombre, String contraseña, 
+//                     String genero, int edad, double dinero, String ciudad, int telefono, String numidentidad, String correo
+                        String universidad=JOptionPane.showInputDialog("universidad");
+                        String hobbies=JOptionPane.showInputDialog("hobbies");
+                        String nombre=JOptionPane.showInputDialog("nombre");
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 String genero=JOptionPane.showInputDialog("genero");
+                 
+                  int  edad=Integer.parseInt(JOptionPane.showInputDialog("edad"));
+                   double dinero=Double.parseDouble(JOptionPane.showInputDialog("dinero"));
+                   String ciudad=JOptionPane.showInputDialog("ciudad");
+                   int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
+                 String correo2=JOptionPane.showInputDialog("correo");
+                 freelance.add(new DiseñadorGrafico(universidad, hobbies, nombre, contraseña2, genero, edad, dinero,
+                         ciudad, telefono, numidentidad2, correo2));
+                 
+                 
                  }
                  if(opcion2.equals("d")){
-                     
+//                     String nombre_marca, String modelo_camara, String nombre, String contraseña, 
+//                     String genero, int edad, double dinero, String ciudad, int telefono, String numidentidad, String correo
+                    String nombre_marca=JOptionPane.showInputDialog("nombre de la marca");
+                 String modelo_camara=JOptionPane.showInputDialog("modelo de la camara");
+                String nombre=JOptionPane.showInputDialog("nombre");
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 String genero=JOptionPane.showInputDialog("genero");
+                 
+                  int  edad=Integer.parseInt(JOptionPane.showInputDialog("edad"));
+                   double dinero=Double.parseDouble(JOptionPane.showInputDialog("dinero"));
+                   String ciudad=JOptionPane.showInputDialog("ciudad");
+                   int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
+                 String correo2=JOptionPane.showInputDialog("correo");
+                 freelance.add(new medios_audiovisuales(nombre_marca, modelo_camara, nombre,
+                         contraseña2, genero, edad, dinero, ciudad, telefono, numidentidad2, correo2));
                  }
                  if(opcion2.equals("e")){
-                     
-                 }if(opcion2.equals("f")){
-                     
+//                     String Red_Social, String nombre, String contraseña, String genero, int edad,
+//                             double dinero, String ciudad, int telefono, String numidentidad, String correo
+                 String Red_social=JOptionPane.showInputDialog("red social");
+                String nombre=JOptionPane.showInputDialog("nombre");
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 String genero=JOptionPane.showInputDialog("genero");
+                 
+                  int  edad=Integer.parseInt(JOptionPane.showInputDialog("edad"));
+                   double dinero=Double.parseDouble(JOptionPane.showInputDialog("dinero"));
+                   String ciudad=JOptionPane.showInputDialog("ciudad");
+                   int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
+                 String correo2=JOptionPane.showInputDialog("correo");
+                 freelance.add(new marketing(Red_social, nombre, contraseña2, genero, edad, dinero,
+                         ciudad, telefono, numidentidad2, correo2));
+                    
+         }
+                 if(opcion2.equals("f")){
+//                      String universidad, String Estado_Inscripcion, String Hobbies, String nombre, String contraseña, String genero, 
+//                      int edad, double dinero, String ciudad, int telefono, String numidentidad, String correo
+                    String universidad=JOptionPane.showInputDialog("universidad");
+                    String estado_inscripcion=JOptionPane.showInputDialog("estado de inscripcion");
+                     String hobbies=JOptionPane.showInputDialog("hobbies");
+                     String nombre=JOptionPane.showInputDialog("nombre");
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 String genero=JOptionPane.showInputDialog("genero");
+                 
+                  int  edad=Integer.parseInt(JOptionPane.showInputDialog("edad"));
+                   double dinero=Double.parseDouble(JOptionPane.showInputDialog("dinero"));
+                   String ciudad=JOptionPane.showInputDialog("ciudad");
+                   int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
+                 String correo2=JOptionPane.showInputDialog("correo");
+                 freelance.add(new contador(universidad, estado_inscripcion, hobbies, nombre, 
+                         contraseña2, genero, edad, dinero, ciudad, telefono, numidentidad2, correo2));
+                
+                 
                  }
-                 
-                 
                  break;
              case "c":
                  break;
