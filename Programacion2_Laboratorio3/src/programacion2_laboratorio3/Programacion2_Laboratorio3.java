@@ -25,8 +25,6 @@ public class Programacion2_Laboratorio3 {
         while (!opcion.equals("c")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
                     + "a. Registrar\n"
-
-
                     + "b. Login\n"
                     + "C. Salir \n");
 
@@ -313,8 +311,23 @@ public class Programacion2_Laboratorio3 {
         while (!opcion.equals("e")) {
             opcion=JOptionPane.showInputDialog("EMPRESA\n"
                     + "a. Modificar Datos\n"
-                    + "b. Listar Ingresos\n"
+                    + "b. Listar Ingresos (Proximamente) \n"
                     + "e. Salir \n");
+        }if (opcion.equals("a")) {
+            int posi= Integer.parseInt(JOptionPane.showInputDialog("Posicion a Modificar: "));
+                if (posi>=0 && posi<connective.getAdministradores().size() && connective.getAdministradores().get(pos) instanceof Administrador) {
+                    String textura = JOptionPane.showInputDialog("Nueva Textura: ");
+                
+                 String usuario=JOptionPane.showInputDialog("Usuario");
+                 connective.getAdministradores().get(posi).setUsuario(usuario);
+                 String contraseña=JOptionPane.showInputDialog("Contraeña");
+                 connective.getAdministradores().get(posi).setConraseña(contraseña);
+                 String numidentidad=JOptionPane.showInputDialog("Numero de idnetidad");
+                 connective.getAdministradores().get(posi).setNumidentidad(numidentidad);
+                 String correo=JOptionPane.showInputDialog("correo");
+                 connective.getAdministradores().get(posi).setCorreo(correo);
+        }
+        
         }
     }
     public static void serFreelance(int pos){
