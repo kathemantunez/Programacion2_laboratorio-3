@@ -7,31 +7,16 @@ package programacion2_laboratorio3;
 
 
 
-import java.util.ArrayList;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
 
-/**
- *
- * @author FABIO
-=======
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author KATHERINE
->>>>>>> 1602bfb7cddbe39744a6480aeb2e4471bfb9b0a1
- */
+
+
 public class Programacion2_Laboratorio3 {
 
-//static ArrayList <Administrador> administradores=new ArrayList();
-//static ArrayList <Freelance>freelance=new ArrayList();
-//static ArrayList <Empresas> empresas=new ArrayList();
-//static ArrayList <Proyecto> proyectos = new ArrayList();
+
         static Connective_Line connective=new Connective_Line();
-    /**
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         // TODO code application logic here
         
@@ -40,8 +25,6 @@ public class Programacion2_Laboratorio3 {
         while (!opcion.equals("c")) {
             opcion=JOptionPane.showInputDialog("CONNECTIVE LINE\n"
                     + "a. Registrar\n"
-
-
                     + "b. Login\n"
                     + "C. Salir \n");
 
@@ -56,7 +39,6 @@ public class Programacion2_Laboratorio3 {
         }
     }
     public static void registrar(){
-        
          String opcion=JOptionPane.showInputDialog("a. Administrador\n"
                  + "b. Freelance\n"
                  + "c. Empresas");
@@ -276,20 +258,77 @@ public class Programacion2_Laboratorio3 {
     }//fin de login
     public static void serEmpresa(int pos){
         String opcion = " ";
-        while (!opcion.equals("c")) {
+        while (!opcion.equals("f")) {
             opcion=JOptionPane.showInputDialog("EMPRESA\n"
-                    + "a. Crear Proyecto\n"
-                    + "b. Modificar Proyecto\n"
-                    + "C. Eliminar Proyecto \n");
+                    + "a. Modificar Datos\n"
+                    + "b. Crear Proyecto\n"
+                    + "c. Modificar Proyecto\n"
+                    + "d. Eliminar Proyecto \n"
+                    + "e. Salir \n");
             if(opcion.equals("a")){
-            String proyecto = JOptionPane.showInputDialog("Ingrese el nombre del proyecto \n");
-            String usuario = JOptionPane.showInputDialog("Ingrese Usuario \n"); 
+                String proy = " ";
+                 while (!proy.equals("d")) {
+                    opcion=JOptionPane.showInputDialog("Proyectos\n"
+                    + "a. Proyecto Web \n"
+                    + "b. Proyecto Publicitario \n"
+                    + "c. Proyecto Comercial \n"
+                    + "d. salir \n");
+                    if(opcion.equals("a")){
+                        String Nombre = JOptionPane.showInputDialog("Ingrese el nombre del proyecto \n");
+                        Double Precio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el precio \n")); 
+                        String Estado = JOptionPane.showInputDialog("Ingrese el estado del proyecto \n");
+                        String Descripcion = JOptionPane.showInputDialog("Ingrese el estado del proyecto \n");
+                        String fecha = JOptionPane.showInputDialog("Ingrese la fecha de inicio \n");
+                        String fecha_entrega = JOptionPane.showInputDialog("Ingrese la fecha de entrega \n");
+                        connective.getEmpresa().get(pos).getListap().add(new proyecto_web(Nombre,Precio,Estado,Descripcion,fecha,fecha_entrega));
+                        
+                    }if(opcion.equals("b")){
+                        String Nombre = JOptionPane.showInputDialog("Ingrese el nombre del proyecto \n");
+                        Double Precio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el precio \n")); 
+                        String Estado = JOptionPane.showInputDialog("Ingrese el estado del proyecto \n");
+                        String Descripcion = JOptionPane.showInputDialog("Ingrese el estado del proyecto \n");
+                        String fecha = JOptionPane.showInputDialog("Ingrese la fecha de inicio \n");
+                        String fecha_entrega = JOptionPane.showInputDialog("Ingrese la fecha de entrega \n");
+                        connective.getEmpresa().get(pos).getListap().add(new proyecto_publicitario(Nombre,Precio,Estado,Descripcion,fecha,fecha_entrega));
+                    }if(opcion.equals("c")){
+                         String Nombre = JOptionPane.showInputDialog("Ingrese el nombre del proyecto \n");
+                        Double Precio = Double.parseDouble(JOptionPane.showInputDialog("Ingrese el precio \n")); 
+                        String Estado = JOptionPane.showInputDialog("Ingrese el estado del proyecto \n");
+                        String Descripcion = JOptionPane.showInputDialog("Ingrese el estado del proyecto \n");
+                        String fecha = JOptionPane.showInputDialog("Ingrese la fecha de inicio \n");
+                        String fecha_entrega = JOptionPane.showInputDialog("Ingrese la fecha de entrega \n");
+                        connective.getEmpresa().get(pos).getListap().add(new proyecto_comercial(Nombre,Precio,Estado,Descripcion,fecha,fecha_entrega));
+                    }
+            
+            
             }
-
     }
+        }
+        
     }
     public static void serAdmin(int pos){
+         String opcion = " ";
+        while (!opcion.equals("e")) {
+            opcion=JOptionPane.showInputDialog("EMPRESA\n"
+                    + "a. Modificar Datos\n"
+                    + "b. Listar Ingresos (Proximamente) \n"
+                    + "e. Salir \n");
+        }if (opcion.equals("a")) {
+            int posi= Integer.parseInt(JOptionPane.showInputDialog("Posicion a Modificar: "));
+                if (posi>=0 && posi<connective.getAdministradores().size() && connective.getAdministradores().get(pos) instanceof Administrador) {
+                    String textura = JOptionPane.showInputDialog("Nueva Textura: ");
+                
+                 String usuario=JOptionPane.showInputDialog("Usuario");
+                 connective.getAdministradores().get(posi).setUsuario(usuario);
+                 String contraseña=JOptionPane.showInputDialog("Contraeña");
+                 connective.getAdministradores().get(posi).setConraseña(contraseña);
+                 String numidentidad=JOptionPane.showInputDialog("Numero de idnetidad");
+                 connective.getAdministradores().get(posi).setNumidentidad(numidentidad);
+                 String correo=JOptionPane.showInputDialog("correo");
+                 connective.getAdministradores().get(posi).setCorreo(correo);
+        }
         
+<<<<<<< HEAD
         
         
     }
@@ -429,7 +468,15 @@ public class Programacion2_Laboratorio3 {
             }
         
         
+=======
+        }
     }
+    public static void serFreelance(int pos){
+       
+       
+>>>>>>> 91b23510541b9d8ab7605329f8eca16547c5e70c
+    }
+    
     }
 }
 

@@ -11,9 +11,19 @@ public class Proyecto {
     private double precio;
     private String estado;
     private String Descripcion;
-    private Date fecha_inicio;
-    private Date fecha_entrega;  
+    private String fecha_inicio;
+    private String fecha_entrega;  
 
+    public Proyecto(String nombre, double precio, String estado, String Descripcion, String fecha_inicio, String fecha_entrega) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.estado = estado;
+        this.Descripcion = Descripcion;
+        this.fecha_inicio = fecha_inicio;
+        this.fecha_entrega = fecha_entrega;
+    }
+
+    
     public String getNombre() {
         return nombre;
     }
@@ -54,19 +64,19 @@ public class Proyecto {
         this.Descripcion = Descripcion;
     }
 
-    public Date getFecha_inicio() {
+    public String getFecha_inicio() {
         return fecha_inicio;
     }
 
-    public void setFecha_inicio(Date fecha_inicio) {
+    public void setFecha_inicio(String fecha_inicio) {
         this.fecha_inicio = fecha_inicio;
     }
 
-    public Date getFecha_entrega() {
+    public String getFecha_entrega() {
         return fecha_entrega;
     }
 
-    public void setFecha_entrega(Date fecha_entrega) {
+    public void setFecha_entrega(String fecha_entrega) {
         this.fecha_entrega = fecha_entrega;
     }
     

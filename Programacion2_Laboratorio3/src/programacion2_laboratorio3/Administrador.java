@@ -16,7 +16,7 @@ public class Administrador extends Personas{
 
     public Administrador() {
     }
-
+    
     public Administrador(String usuario, String conraseña, String numidentidad, String correo) {
         super(numidentidad, correo);
         this.usuario = usuario;
