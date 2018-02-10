@@ -328,7 +328,7 @@ public class Programacion2_Laboratorio3 {
                  connective.getAdministradores().get(posi).setCorreo(correo);
         }
         
-<<<<<<< HEAD
+        }
         
         
     }
@@ -467,16 +467,9 @@ public class Programacion2_Laboratorio3 {
 //                
             }
         
-        
-=======
-        }
-    }
-    public static void serFreelance(int pos){
-       
-       
->>>>>>> 91b23510541b9d8ab7605329f8eca16547c5e70c
-    }
-    
+     
+
+}
     }
 }
 
