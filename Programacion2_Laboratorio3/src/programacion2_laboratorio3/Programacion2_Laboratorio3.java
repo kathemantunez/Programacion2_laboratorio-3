@@ -38,7 +38,7 @@ public class Programacion2_Laboratorio3 {
 
        String opcion = " ";
         while (!opcion.equals("c")) {
-            opcion=JOptionPane.showInputDialog("CONNECTIVE LINEL\n"
+            opcion=JOptionPane.showInputDialog("CONNECTIVE LINE\n"
                     + "a. Registrar\n"
 
 
@@ -264,7 +264,7 @@ public class Programacion2_Laboratorio3 {
                 }else
                     if(connective.getFreelance().get(i).getCorreo().equals(usuario)){
                         if(contraseña.equals(connective.getFreelance().get(i).getContraseña())){
-                            serFreelance(i);
+                            serFreelance(i,connective.getFreelance().get(i));
 
                         }else{
                             System.out.println("Datos incorrectos");
@@ -291,8 +291,142 @@ public class Programacion2_Laboratorio3 {
     public static void serAdmin(int pos){
         
         
+        
     }
-    public static void serFreelance(int pos){
+    public static void serFreelance(int pos,Freelance usuario){
+        String opcion="";
+     while (!opcion.equals("c")) {
+         opcion=JOptionPane.showInputDialog("a. modificar\n"
+                 + "b. eliminar \n"
+                 + "c.salir" );
+         if(opcion.equals("a")){//
+             int c=1;
+             String cadena="";
+//             carros.get(pos-1).setAltura(altura);
+                if(usuario instanceof DesarrolladorWeb){
+                 String lenguaajeprogra=JOptionPane.showInputDialog("lenguaje de programacion");
+                    if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setLenguajeprogra(lenguaajeprogra);
+                    }
+                 String universdad=JOptionPane.showInputDialog("universidad");
+                 if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setUniversidad(universdad);
+                    }
+                 String idioma=JOptionPane.showInputDialog("idioma");
+                 if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setIdioma(idioma);
+                    }
+                 String nombre=JOptionPane.showInputDialog("nombre");
+                 if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setNombre(nombre);
+                    }
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setContraseña(contraseña2);
+                    }
+                 int  edad=Integer.parseInt(JOptionPane.showInputDialog("edad"));
+                 if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setEdad(edad);
+                    }
+                 double dinero=Double.parseDouble(JOptionPane.showInputDialog("dinero"));
+                 if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setDinero(dinero);
+                    }
+                String ciudad=JOptionPane.showInputDialog("ciudad");
+                if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setCiudad(ciudad);
+                    }
+                int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setTelefono(telefono);
+                    }
+                String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
+                if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setNumidentidad(numidentidad2);
+                    }
+                 String correo2=JOptionPane.showInputDialog("correo");
+                 if (connective.getFreelance().get(pos) instanceof DesarrolladorWeb) {
+                        ((DesarrolladorWeb)connective.getFreelance().get(c)).setCorreo(correo2);
+                    }
+                }
+                if(usuario instanceof Fotografo){
+                 String marca=JOptionPane.showInputDialog("marca");
+                 if (connective.getFreelance().get(pos) instanceof Fotografo) {
+                        ((Fotografo)connective.getFreelance().get(c)).setMarca(marca);
+                    }
+                 String modelocamara=JOptionPane.showInputDialog("modelo camara ");
+                 if (connective.getFreelance().get(pos) instanceof Fotografo) {
+                        ((Fotografo)connective.getFreelance().get(c)).setModelocamara(modelocamara);
+                    }
+                 String nombre=JOptionPane.showInputDialog("nombre");
+                 if (connective.getFreelance().get(pos) instanceof Fotografo) {
+                        ((Fotografo)connective.getFreelance().get(c)).setNombre(nombre);
+                    }
+                 String contraseña2=JOptionPane.showInputDialog("contraseña");
+                 if (connective.getFreelance().get(pos) instanceof Fotografo) {
+                        ((Fotografo)connective.getFreelance().get(c)).setContraseña(contraseña2);
+                    }
+                 String genero=JOptionPane.showInputDialog("genero");
+                 if (connective.getFreelance().get(pos) instanceof Fotografo) {
+                        ((Fotografo)connective.getFreelance().get(c)).setGenero(genero);
+                    }
+                 
+                  int  edad=Integer.parseInt(JOptionPane.showInputDialog("edad"));
+                  if (connective.getFreelance().get(pos) instanceof Fotografo) {
+                        ((Fotografo)connective.getFreelance().get(c)).setEdad(edad);
+                    
+                   double dinero=Double.parseDouble(JOptionPane.showInputDialog("dinero"));
+                   if (connective.getFreelance().get(pos) instanceof Fotografo) {
+                        ((Fotografo)connective.getFreelance().get(c)).setDinero(dinero);
+                    }
+                   String ciudad=JOptionPane.showInputDialog("ciudad");
+                   
+                   int  telefono=Integer.parseInt(JOptionPane.showInputDialog("telefono"));
+                String numidentidad2=JOptionPane.showInputDialog("numero de indentidad");
+                 String correo2=JOptionPane.showInputDialog("correo");
+                    
+             
+         }
+         
+//             String cadena="";
+//                       int c=1;
+//                           for (int i = 0; i < carros.size(); i++) {
+//                               cadena+="\n"+c+"."+carros.get(i);
+//                               c++;
+//                           }
+//                           int pos=Integer.parseInt(JOptionPane.showInputDialog(cadena+"\nCarro a modificar:"));
+//                            String funcion=JOptionPane.showInputDialog("Nueva Función:");
+//                            carros.get(pos-1).setFuncion(funcion);
+//                            int capacidad=Integer.parseInt(JOptionPane.showInputDialog("Nueva Capacidad (kg):"));
+//                            carros.get(pos-1).setCapacidad(capacidad);
+//                            int longitud=Integer.parseInt(JOptionPane.showInputDialog("Nueva Longitud:"));
+//                            carros.get(pos-1).setLongitud(longitud);
+//                            int altura=Integer.parseInt(JOptionPane.showInputDialog("Nueva Altura:"));
+//                            carros.get(pos-1).setAltura(altura);
+             
+         }
+         
+//        while (!opcion.equals("c")) {
+//            opcion=JOptionPane.showInputDialog("a. Proyecto web\n"
+//                    + "b. Proyecto publicitario\n"
+//                    + "c. Proyecto Comercial" );
+//            if(opcion.equals("a")){
+//                String cadena="";
+//              int c=1;
+//              
+//                for (int i = 0; i <connective.getFreelance().size(); i++) {
+//                    cadena+="\n"+c+"."+connective.
+//                    c++;
+//                }
+//                    
+//                }
+//            }
+//            if(opcion.equals("b")){
+//                
+//            }
+//            if(opcion.equals("c")){
+//                
+            }
         
         
     }

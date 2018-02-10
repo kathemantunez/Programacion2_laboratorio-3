@@ -9,6 +9,14 @@ public class Connective_Line {
     private ArrayList <Freelance> freelance = new ArrayList();
     private ArrayList <Administrador> administradores=new ArrayList();
     
+
+    public ArrayList<Personas> getPersonas() {
+        return personas;
+    }
+
+    public void setPersonas(ArrayList<Personas> personas) {
+        this.personas = personas;
+    }
     private double dinero;
 
     public Connective_Line() {
